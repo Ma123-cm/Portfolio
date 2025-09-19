@@ -1,0 +1,75 @@
+#works {
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.worksTitle {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.worksDesc {
+    font-weight: 300;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.worksImgs {
+    display: flex;
+    flex-wrap: wrap;        /* 图片自动换行 */
+    gap: 2rem;              /* 图片之间的间距 */
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.worksImgs div {
+    flex: 1 1 250px;        /* 每个项目最小 250px */
+    max-width: 300px;       /* 防止超大 */
+    text-align: center;
+}
+
+.worksImg {
+    object-fit: cover;
+    width: 100%;            /* 图片自适应容器 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.workBtn {
+    padding: 0.6rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background: #61dafb;
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.workBtn:hover {
+    background: #21a1f1;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .worksImgs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .worksImgs div {
+        max-width: 90%;
+    }
+}
